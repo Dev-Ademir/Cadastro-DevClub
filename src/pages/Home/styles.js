@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 export const Container = styled.div`
   background-color: #1e3fae;
   display: flex;
@@ -22,8 +21,8 @@ export const TopBackground = styled.div`
   overflow: hidden;
 
   img {
-    width: 70%;
-    height: 70%;
+    width: 50%;
+    height: 100%;
   }
 `;
 export const Form = styled.form`
@@ -54,7 +53,6 @@ span {
   color: #ef4f45;
   font-weight: bold;
 }
-
 `;
 export const Input = styled.input`
   border-radius: 10px;
@@ -62,6 +60,15 @@ export const Input = styled.input`
   padding: 12px 20px;
   outline: none;
   width: 100%;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  -moz-appearance: textfield;
+
 `;
 export const Button = styled.button`
 border: none;

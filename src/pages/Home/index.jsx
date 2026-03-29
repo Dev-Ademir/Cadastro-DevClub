@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import {
   Container,
   TopBackground,
@@ -7,9 +8,20 @@ import {
   Input,
   Button,
   Title,
-} from "../src/styles/styles.js";
-import UsersImage from "./assets/users.png";
+} from "./styles.js";
+import UsersImage from "../../assets/users.png";
+
 function Home() {
+  const inputName = useRef();
+  const inputAge = useRef();
+  const inputEmail = useRef();
+
+  function registerNewUser() {
+    console.log(inputName.current.value);
+    console.log(inputAge.current.value);
+    console.log(inputEmail.current.value);
+  }
+
   return (
     <Container>
       <TopBackground>
@@ -23,20 +35,20 @@ function Home() {
             <InputLabel>
               Nome<span> *</span>
             </InputLabel>
-            <Input type="text" placeholder="Nome do usuário" />
+            <Input type="text" placeholder="Nome completo" ref={inputName} />
             <InputLabel>
               Idade<span> *</span>
             </InputLabel>
-            <Input type="number" placeholder="Idade do usuário" />
+            <Input type="number" placeholder="Sua idade" ref={inputAge} />
           </div>
           <div style={{ width: '100%' }}>
             <InputLabel>
               E-mail<span> *</span>
             </InputLabel>
-            <Input type="e-mail" placeholder="E-mail do usuário" />
+            <Input type="e-mail" placeholder="E-mail do usuário" ref={inputEmail} />
           </div>
         </ContainerInputs>
-        <Button>Cadastrar</Button>
+        <Button type="button" onClick={registerNewUser}>Cadastrar</Button>
       </Form>
     </Container>
   );
