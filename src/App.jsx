@@ -1,42 +1,44 @@
-import { Container } from "./styles";
-import { TopBackground } from "./styles";
-import { Form } from "./styles";
-import { ContainerInputs } from "./styles";
-import { InputLabel } from "./styles";
-import { Input } from "./styles";
-import { Button } from "./styles";
-import { Title } from "./styles";
-
+import {
+  Container,
+  TopBackground,
+  Form,
+  ContainerInputs,
+  InputLabel,
+  Input,
+  Button,
+  Title,
+} from "../src/styles/styles.js";
+import UsersImage from "./assets/users.png";
 function Home() {
   return (
-    <>
-      <Container>
-        <TopBackground>
-          <img />
-        </TopBackground>
-        <Form>
-          <Title>Cadastrar Usuário</Title>
+    <Container>
+      <TopBackground>
+        <img src={UsersImage} alt="Imagem dos usuários" />
+      </TopBackground>
+      <Form>
+        <Title>Cadastrar Usuário</Title>
 
-          <ContainerInputs>
-            <div>
-              <InputLabel>
-                Nome<span>*</span>
-              </InputLabel>
-              <Input type="text" placeholder="Nome do usuário" />
-              <InputLabel>
-                Idade<span>*</span>
-              </InputLabel>
-              <Input type="number" placeholder="Idade do usuário" />
-            </div>
+        <ContainerInputs>
+          <div>
             <InputLabel>
-              E-mail<span>*</span>
+              Nome<span> *</span>
+            </InputLabel>
+            <Input type="text" placeholder="Nome do usuário" />
+            <InputLabel>
+              Idade<span> *</span>
+            </InputLabel>
+            <Input type="number" placeholder="Idade do usuário" />
+          </div>
+          <div style={{ width: '100%' }}>
+            <InputLabel>
+              E-mail<span> *</span>
             </InputLabel>
             <Input type="e-mail" placeholder="E-mail do usuário" />
-          </ContainerInputs>
-          <Button>Cadastrar</Button>
-        </Form>
-      </Container>
-    </>
+          </div>
+        </ContainerInputs>
+        <Button>Cadastrar</Button>
+      </Form>
+    </Container>
   );
 }
 

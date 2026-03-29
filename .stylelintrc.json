@@ -1,0 +1,8 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "declaration-property-value-disallowed-list": null,
+    "no-empty-source": null
+  },
+  "customSyntax": "postcss-styled-syntax"
+}
