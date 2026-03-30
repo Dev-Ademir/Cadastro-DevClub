@@ -9,22 +9,6 @@ export const Container = styled.div`
   padding: 20px;
   margin: 0 auto;
 `;
-export const TopBackground = styled.div`
-  background: linear-gradient(to right, #fe7e5d, #7f3841);
-  height: 30vh;
-  width: 90vw;
-  max-width: 600px;
-  border-radius: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-
-  img {
-    width: 50%;
-    height: 100%;
-  }
-`;
 export const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -69,22 +53,4 @@ export const Input = styled.input`
   
   -moz-appearance: textfield;
 
-`;
-export const Button = styled.button`
-border: none;
-background: linear-gradient(180deg, #FE7E5D, #FF6378 100%);
-font-size: 16px;
-color: #fff;
-padding: 16px 32px;
-width: fit-content;
-border-radius: 30px;
-cursor: pointer;
-
-&:hover {
-  opacity: 0.8;
-}
-
-&:active {
-  opacity: 0.6;
-}
 `;
